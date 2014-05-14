@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  s3_filename: MyString
+  url: MyString
+
+two:
+  name: MyString
+  s3_filename: MyString
+  url: MyString

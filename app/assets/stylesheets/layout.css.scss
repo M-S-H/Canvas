@@ -1,0 +1,63 @@
+$blue: #99BFC7;
+
+body {
+	margin: 0px;
+	padding: 0px;
+
+	color: #333;
+	font-family: vera-sans, sans-serif;
+	background-color: #F9F9F9;
+}
+
+
+#header {
+	height: 75px;
+
+	background-color: #FFF;
+	box-shadow: 0 0 3px #999;
+
+	#headwrap {
+		width: 820px;
+		margin: auto;
+
+		a {
+			float: right;
+			margin-left: 20px;
+			margin-top: 28px;
+
+			color: #999;
+			font-size: 14px;
+			text-decoration: none;
+
+			&:hover {
+				color: #444;
+			}
+		}
+	}
+
+	#logo {
+		float: left;
+		padding-top: 18px;
+
+		color: #99BFC7;
+		font-size: 32px;
+		letter-spacing: 5px;
+	}
+}
+
+
+#content {
+	width: 820px;
+	margin: auto;
+}
+
+
+@mixin shadow {
+	box-shadow: 0 0 3px #777;
+}
+
+
+.float-break {
+	clear: both;
+	height: 1px;
+}

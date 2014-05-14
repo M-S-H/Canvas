@@ -1,0 +1,41 @@
+@import 'layout';
+
+#webcam {
+	margin-top: 40px;
+}
+
+#video_stream {
+	float: left;
+
+	@include shadow;
+}
+
+
+#videoCanvas {
+	float: right;
+
+	@include shadow;
+}
+
+
+.save_button {
+	margin-top: 10px;
+
+	padding: 5px 25px;
+
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: $blue;
+	border: 1px solid darken($blue, 10%);
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
+}

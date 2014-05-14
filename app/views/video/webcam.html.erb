@@ -1,0 +1,28 @@
+<h1>Webcam</h1>
+
+<div id="edit-image">
+	<div id="filter-list">
+	<div id="filters">Filters <i class="fa fa-chevron-circle-down"></i></div>
+		<ul>
+			<li onclick="vreset()">Reset</li>
+			<li onclick="vdesaturate()">Desaturate</li>
+			<li onclick="vthreshold()">Threshold</li>
+			<li onclick="vsharpen()">Sharpen</li>
+			<li onclick="vblur()">Blur</li>
+			<li onclick="vsobel()">Sobel</li>
+			<li onclick="vlaplace()">Laplace</li>
+		</ul>
+	</div>
+
+	<div class="float-break"></div>
+
+<div id="webcam">
+	<video id="video_stream" width="400px", height="300px" autoplay></video>	
+	<canvas id="videoCanvas" width="400px", height="300px"></canvas>
+	<script type="text/javascript">
+		video_init();
+	</script>
+</div>
+
+<button class="save_button" id="start_rec" onclick="save_video()">Record</button>
+<button class="save_button" id="stop_rec" onclick="stop_save()">Stop</button>

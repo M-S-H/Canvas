@@ -1,0 +1,25 @@
+<h1><%= @image.name %></h1>
+
+<div id="edit-image">
+	<div id="filter-list">
+	<div id="filters">Filters <i class="fa fa-chevron-circle-down"></i></div>
+		<ul>
+			<li onclick="reset()">Reset</li>
+			<li onclick="desaturate()">Desaturate</li>
+			<li onclick="threshold()">Threshold</li>
+			<li onclick="sharpen()">Sharpen</li>
+			<li onclick="imblur()">Blur</li>
+			<li onclick="sobel()">Sobel</li>
+			<li onclick="laplace()">Laplace</li>
+		</ul>
+	</div>
+
+	<div class="float-break"></div>
+
+	<div id="image" image-id="<%= @image.id %>">
+		<%= image_tag @image.url, id: 'original', width: '400px', height: '400px', onload: "imageInit()", crossOrigin: "Anonymous" %>
+		<canvas id="imageCanvas" width="400px", height="400px"></canvas>
+	</div>
+
+	<button id="save-image" onclick="imgsave()">SAVE</button>
+</div>

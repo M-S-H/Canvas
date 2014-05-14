@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//use.edgefonts.net/vera-sans.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="header">
+	<div id="headwrap">
+		<div id="logo">CANVAS</div>
+		<div id="links">
+			<%= link_to 'WEBCAM', '/webcam' %>
+			<%= link_to 'IMAGES', '/images' %>
+		</div>
+	</div>
+</div>
+
+<div id="content">
+	<%= yield %>
+</div>
+
+</body>
+</html>

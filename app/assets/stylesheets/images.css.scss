@@ -1,0 +1,156 @@
+// Place all the styles related to the Images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'layout';
+
+#images {
+	width: 800px;
+	margin: auto;
+}
+
+
+.screen {
+	width: 250px;
+	height: 210px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-top: 40px;
+	position: absolute;
+	z-index: 100;
+	display: none;
+
+	a {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		width: 200px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+
+		color: #FFF;
+		border: 1px solid #FFF;
+		background-color: rgba(255,255,255, 0.2);
+		font-size: 16px;
+		text-align: center;
+		font-weight: bold;
+		text-decoration: none;
+		border-radius: 5px;
+
+		&:hover {
+			//color: $blue;
+			//border: 1px solid $blue;
+			background-color: $blue;
+		}
+	}
+}
+
+
+.image-thumb {
+	width: 250px;
+	height: 250px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+	position: relative;
+
+	@include shadow;
+}
+
+
+#edit-image {
+	position: relative;
+}
+
+
+#image {
+	margin-top: 40px;
+}
+
+
+#filters {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	color: #999;
+	cursor: pointer;
+
+	i {
+		margin-left: 15px;
+	}
+}
+
+
+#filter-list {
+	width: 150px;
+	padding-top: 10px;
+	position: absolute;
+	left: -10px;
+
+	&:hover {
+		background-color: #FFF;
+		@include shadow;
+
+		#filters {
+			color: #444;
+			cursor: pointer;
+		}
+	}
+
+
+	ul {
+		margin-left: 0px;
+		padding: 0px;
+		margin-top: 5px;
+		list-style-type: none;
+		display: none;
+	}
+
+	li {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 14px;
+		color: #999;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #333;
+		}
+	}
+}
+
+
+#save-image {
+	margin-top: 10px;
+
+	padding: 5px 25px;
+
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: $blue;
+	border: 1px solid darken($blue, 10%);
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+
+
+#original {
+	float: left;
+
+	@include shadow;
+}
+
+
+#imageCanvas {
+	float: right;
+
+	@include shadow;
+}

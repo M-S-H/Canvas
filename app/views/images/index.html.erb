@@ -1,0 +1,17 @@
+<h1>Images</h1>
+<!--
+<%= link_to 'Upload Image', '/images/new', id: 'upload_image' %>
+-->
+
+<div id="images">
+	<% @images.each do |i| %>
+		<div class="image-thumb">
+			<div class="screen">
+				<%= link_to 'Edit', i %>
+				<%= link_to 'Download', "/download/#{i.id}" %>
+				<%= link_to 'Delete', i, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
+			<%= image_tag i.url, width: '250px', height: '250px' %>
+		</div>
+	<% end %>
+</div>
